@@ -7,11 +7,6 @@ use App\Controllers\Error;
 
 class SettingsController
 {
-	public function index(){
-		$error = new Error();
-		$error = $error->index();
-	}
-
 	// GET SITE NAME FROM DATABASE
     protected function site_name(){
 
