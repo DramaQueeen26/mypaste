@@ -10,7 +10,7 @@
 		<div class="form">
 
 			<div class="title-form">
-				<h2>Recover Password</h2>
+				<h2><?= $title ?></h2>
 				<p>Then remember it!</p>
 			</div>
 

@@ -9,7 +9,7 @@
 		<div class="form">
 
 			<div class="title-form">
-				<h2>Sign In</h2>
+				<h2><?= $title ?></h2>
 				<p>Welcome back!</p>
 			</div>
 

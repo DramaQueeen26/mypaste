@@ -17,8 +17,8 @@
 		<div class="banner">
 			<div class="banner-img"></div>
 			<div class="banner-text">
-				<h2>Share your texts with</h2>
-				<h1>My Paste</h1>
+				<h2><?= $title ?></h2>
+				<h1><?= $site_name?></h1>
 				<a href="<?= $baseUrl ?>home/signin/">Sign In <i class="bi bi-box-arrow-in-right"></i></a>
 				<a href="<?= $baseUrl ?>home/signup/">Sign Up <i class="bi bi-clipboard-check"></i></a>
 			</div>

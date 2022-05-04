@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="<?= $baseUrl ?>img/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="<?= $baseUrl ?>img/favicon.ico" type="image/x-icon">
-	<title>My Paste | Share your texts</title>
+	<title><?= $title . ' | ' . $site_name?></title>
 	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="<?= $baseUrl ?>bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?= $baseUrl ?>bootstrap/icons/bootstrap-icons.css">
@@ -22,7 +22,7 @@
 			<div class="container-fluid nav-content">
 				<a class="navbar-brand" href="<?= $baseUrl ?>">
 			     	<i class="bi bi-journal-text"></i>
-			      	My Paste
+			      	<?= $site_name ?>
 			    </a>
 			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			      <i class="bi bi-three-dots-vertical"></i>

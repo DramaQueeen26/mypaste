@@ -10,7 +10,7 @@
 		<div class="form">
 
 			<div class="title-form">
-				<h2>Sign Up</h2>
+				<h2><?= $title ?></h2>
 				<p>Hello Stranger!</p>
 			</div>
 

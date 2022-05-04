@@ -3,15 +3,21 @@
 namespace App\Controllers;
 
 use Core\View;
+use App\Controllers\settingsController;
 
-class Home
+class Home extends settingsController
 {
+    // ------------------ VIEWS ---------------------
+
     public function index()
     {
 
         if(isset($_GET['url']) != 'home'){
             $views = ['home/index'];
-            $args  = ['title' => 'Home'];
+            $args  = [
+                'site_name' => settingsController::site_name(),
+                'title' => 'Share your texts'
+            ];
             $header = 'templates/index/header';
             $footer = 'templates/index/footer';
             View::render($views, $args, $header, $footer);
@@ -26,7 +32,10 @@ class Home
     public function signin()
     {
         $views = ['home/signin'];
-        $args  = ['title' => 'Sign In'];
+        $args  = [
+            'site_name' => settingsController::site_name(),
+            'title' => 'Sign In'
+        ];
         $header = 'templates/index/header';
         $footer = 'templates/index/footer';
         View::render($views, $args, $header, $footer);
@@ -35,7 +44,10 @@ class Home
     public function signup()
     {
         $views = ['home/signup'];
-        $args  = ['title' => 'Sign Up'];
+        $args  = [
+            'site_name' => settingsController::site_name(),
+            'title' => 'Sign Up'
+        ];
         $header = 'templates/index/header';
         $footer = 'templates/index/footer';
         View::render($views, $args, $header, $footer);
@@ -43,8 +55,12 @@ class Home
 
     public function recover()
     {
+
         $views = ['home/recover'];
-        $args  = ['title' => 'Recover Password'];
+        $args  = [
+            'site_name' => settingsController::site_name(),
+            'title' => 'Recover Password'
+        ];
         $header = 'templates/index/header';
         $footer = 'templates/index/footer';
         View::render($views, $args, $header, $footer);
