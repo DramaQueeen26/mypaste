@@ -8,8 +8,8 @@ use App\Controllers\Error;
 class SettingsController
 {
 	// GET SITE NAME FROM DATABASE
-    protected function site_name(){
-
+    protected function site_name()
+    {
         $settings = new SettingsModel();
         $settings = $settings->get_site_name();
 
@@ -18,6 +18,5 @@ class SettingsController
         }
 
         return $site_name;
-
     }
 }

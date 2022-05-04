@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Core\View;
+use Core\Util;
 use App\Controllers\settingsController;
 
 class Home extends settingsController
@@ -22,9 +23,8 @@ class Home extends settingsController
             $footer = 'templates/index/footer';
             View::render($views, $args, $header, $footer);
         }else{
-            $url = stripos($_SERVER['SERVER_PROTOCOL'],'https') === true ? 'https://' : 'http://';
-            $url = $url . $_SERVER['HTTP_HOST'];
-            echo '<script> window.location.href="' . $url . '"</script>';
+            $baseUrl = new Util();
+            echo '<script> window.location.href="' . $baseUrl->baseUrl() . '"</script>';
         }
         
     }
@@ -55,7 +55,6 @@ class Home extends settingsController
 
     public function recover()
     {
-
         $views = ['home/recover'];
         $args  = [
             'site_name' => settingsController::site_name(),
